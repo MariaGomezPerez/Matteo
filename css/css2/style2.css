@@ -1,0 +1,25 @@
+
+
+.button-1 {
+	display:inline-block; 
+	padding:12px 19px;
+	font-size:13px;
+	line-height:1.23em;
+	color:#fff; 
+	background:url(../images/button1-tail.gif) 0 0 repeat-x #c42e02;
+	cursor:pointer;
+}
+.button-1:hover {background:#c42e02;}
+
+.button-2 {
+	display:inline-block; 
+	padding:12px 19px;
+	font-size:13px;
+	line-height:0.23em;
+    margin-left: 343px;
+	color:#fff; 
+	background:url(../images/button2-tail.gif) 0 0 repeat-x #779f02;
+	cursor:pointer;
+}
+.button-2:hover {background:#779f02;}
+

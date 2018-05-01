@@ -318,7 +318,16 @@ a:hover.projects{text-decoration:none}
 
 input.button{color:#ffffff;	background:#414141;	font:bold 11px Arial, Helvetica, sans-serif; text-decoration:none; padding:10px 10px; margin:0px 5px 5px 0;	border:1px solid #000;}
 input.button:hover{cursor:pointer; color:#cccccc;}
-.project-img{float:right; margin-left:20px;	border: 6px solid #ffe0aa;}
+.project-img{float:right; margin-left:20px;	border: 6px solid #FDBA94;}
+.project-img2{float:right; margin-left:20px;	border: 6px solid #FDBA94;}
+.project-img3{float:center; margin-left:20px;	border: 6px solid #FDBA94;}
+
+.project{float:right; margin-left:20px;	border: 6px solid #FDBA94;}
+.project2{float:right; margin-left:20px;	border: 6px solid #FDBA94;}
+.project3{float:center; margin-left:20px;	border: 6px solid #FDBA94;}
+
+
+
 .whiteheading{font:30px Myriad Pro, Arial; color:#000; font-weight:100;	padding:0px; margin:25px 0px 20px 0px;}
 .ourprojectrow{margin-bottom:20px; border-bottom:1px dotted #000; padding-bottom:10px;}
 .servicecolumnzone{padding:20px 0px 16px 0px;}
