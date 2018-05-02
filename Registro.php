@@ -39,44 +39,41 @@
 		    <label for="Cadena_Seguridad">Cadena Seguridad</label>
 		    <input type="text" class="form-control" id="Ap_Materno" name="Ap_Materno" placeholder="Ap_Materno">
 		  </div>
+        
              <div class="form-group">
-		    <label for="Ap_Materno">Apellido Materno</label>
-		    <input type="text" class="form-control" id="Ap_Materno" name="Ap_Materno" placeholder="Ap_Materno">
-		  </div>
-             <div class="form-group">
-		    <label for="Calle">Apellido Materno</label>
+		    <label for="Calle">Calle</label>
 		    <input type="text" class="form-control" id="Calle" name="Calle" placeholder="Calle">
 		  </div>
              <div class="form-group">
-		    <label for="Numero_Int">Apellido Materno</label>
+		    <label for="Numero_Int">Numero Interno</label>
 		    <input type="text" class="form-control" id="Numero_Int" name="Numero_Int" placeholder="Numero_Int">
 		  </div>
              <div class="form-group">
-		    <label for="Numero_Ext">Apellido Materno</label>
+		    <label for="Numero_Ext">Numero Externo</label>
 		    <input type="text" class="form-control" id="Numero_Ext" name="Numero_Ext" placeholder="Numero_Ext">
 		  </div>
              <div class="form-group">
-		    <label for="Colonia">Apellido Materno</label>
+		    <label for="Colonia">Colonia</label>
 		    <input type="text" class="form-control" id="Colonia" name="Colonia" placeholder="Colonia">
 		  </div>
              <div class="form-group">
-		    <label for="Codigo_Postal">Apellido Materno</label>
+		    <label for="Codigo_Postal">Codigo Postal</label>
 		    <input type="text" class="form-control" id="Codigo_Postal" name="Codigo_Postal" placeholder="Codigo_Postal">
 		  </div>
              <div class="form-group">
-		    <label for="Fecha_Nacimiento">Apellido Materno</label>
+		    <label for="Fecha_Nacimiento">Fecha de Nacimiento</label>
 		    <input type="text" class="form-control" id="Fecha_Nacimiento" name="Fecha_Nacimiento" placeholder="Fecha_Nacimiento">
 		  </div>
              <div class="form-group">
-		    <label for="Sexo">Apellido Materno</label>
+		    <label for="Sexo">Sexo</label>
 		    <input type="text" class="form-control" id="Sexo" name="Sexo" placeholder="Sexo">
 		  </div>
              <div class="form-group">
-		    <label for="Telefono_Celular">Apellido Materno</label>
+		    <label for="Telefono_Celular">Telefono Celular</label>
 		    <input type="text" class="form-control" id="Telefono_Celular" name="Telefono_Celular" placeholder="Telefono_Celular">
 		  </div>
              <div class="form-group">
-		    <label for="Telefono_Local">Apellido Materno</label>
+		    <label for="Telefono_Local">Telefono Local</label>
 		    <input type="text" class="form-control" id="Telefono_Loca" name="Telefono_Loca" placeholder="Telefono_Loca">
 		  </div>
             <div class="form-group">
