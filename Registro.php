@@ -15,13 +15,10 @@
 		    <input type="text" class="form-control" id="Usuario" name="Usuario" placeholder="Nombre de usuario">
 		  </div>
 		  <div class="form-group">
-		    <label for="fullname">Nombre Completo</label>
+		    <label for="fullname">Nombre</label>
 		    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre Completo">
 		  </div>
-		  <div class="form-group">
-		    <label for="email">Correo Electronico</label>
-		    <input type="email" class="form-control" id="email" name="email" placeholder="Correo Electronico">
-		  </div>
+		  
 		  <div class="form-group">
 		    <label for="Contraseña">Contrase&ntilde;a</label>
 		    <input type="Contraseña" class="form-control" id="Contraseña" name="Contraseña" placeholder="Contrase&ntilde;a">
