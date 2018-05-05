@@ -1,0 +1,218 @@
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block;}
+mark, rp, rt, ruby, summary, time {display:inline;}
+
+
+
+/*********************************content*************************************/
+#content {
+	width:120%; 
+	padding:15px 0 50px;
+	
+	position:relative;
+	z-index:1;
+}
+
+.spacer-1 {
+	width:100%; 
+	background:url(../images/pic-1.gif) 217px 0 repeat-y;
+}
+
+
+
+.border-bot {
+	width:100%; 
+	padding-bottom:20px; 
+	background:url(../images/pic-1.gif) 0 bottom repeat-x;
+}
+
+.box {
+	width:100%; 
+	background:url(../images/box-tail.gif) 0 0 repeat-x;
+}
+
+.button-1 {
+	display:inline-block; 
+	padding:12px 19px;
+	font-size:13px;
+	line-height:1.23em;
+	color:#fff; 
+	background:url(../images/button1-tail.gif) 0 0 repeat-x #c42e02;
+	cursor:pointer;
+}
+.button-1:hover {background:#c42e02;}
+
+.button-2 {
+	display:inline-block; 
+	padding:12px 19px;
+	font-size:20px;
+	line-height:1.23em;
+	color:#fff; 
+	background:url(../images/button2-tail.gif) 0 0 repeat-x #779f02;
+	cursor:pointer;
+}
+.button-2:hover {background:#779f02;}
+
+.list-1 li {
+	line-height:18px; 
+	padding:6px 0 6px 20px; 
+	background:url(../images/marker-1.png) 0 12px no-repeat;
+}
+	.list-1 a {
+		display:inline-block;
+		color:#7f7f7f;
+	}
+	.list-1 a:hover {color:#d53a03; text-decoration:underline;}
+	.list-1 span {display:block; line-height:25px; padding:8px 0 17px;}
+	.list-1 strong {display:block;}
+	
+.list-2 {width:270px;}
+.list-2 dt {font-weight:bold; margin-bottom:5px;}
+.list-2 dt,
+.list-2 dd {width:100%; overflow:hidden;}
+.list-2 em {font-style:normal; float:left;}
+.list-2 span {float:right; text-align:right; width:auto; font-weight:normal;}
+.list-2 dt span {font-weight:bold;}
+
+.price-list li {
+	overflow: hidden; 
+	vertical-align: top;
+	line-height: 18px;
+	padding:6px 0 6px 20px;
+	background:url(../images/marker-2.png) 0 12px no-repeat;
+}
+	.price-list strong {
+		display: block; 
+		overflow: hidden;
+	}
+	.price-list span {
+		float: right;
+		color: #7f7f7f;
+	}
+	.price-list a {
+		float: left;
+		text-decoration: none;
+		color: #7f7f7f;
+	}
+	.price-list a:hover {color:#81a60b; text-decoration:underline;}
+
+.link:hover {text-decoration:underline;} 
+
+.link-1 {
+	display:inline-block; 
+	font-size:14px; 
+	padding-right:8px; 
+	background:url(../images/marker-3.gif) right 8px no-repeat;
+}
+.link-1:hover {color:#fff;} 
+
+.text-1 {font-size:14px;} 
+
+dl span {float:left; width:96px; font-weight:bold;}
+
+/***** bx-slider *****/
+.bx-wrapper {overflow:hidden; position:relative;}
+	#page2 .bx-wrapper {width:450px !important; height:545px;}
+	#page3 .bx-wrapper {width:940px !important; height:752px;}
+.bx-window {height:510px; overflow:hidden; width:100%; position:relative;}
+	#page3 .bx-window {height:710px;}
+#slider {
+	width:100%;
+	height:510px;
+	overflow:hidden;
+}
+#slider > div {
+	overflow:hidden;
+	width:160px;
+	height:510px;
+}
+#slider-2 > div {
+	overflow:hidden;
+	width:240px;
+	height:710px;
+}
+#slider figure {margin-bottom:8px;}
+#slider-2 figure {margin-bottom:17px;}
+#slider-2 h5 {margin-bottom:5px}
+.bx-next {
+	display:inline-block;
+	font-size:19px;
+	line-height:1.2em;
+	color:#72ad1a;
+	text-transform:capitalize;
+	text-decoration:none;
+	position:absolute;
+	z-index:99;
+	left:63px;
+	bottom:4px;
+}
+.bx-prev {display:none !important;}
+
+.bx-pager {padding:16px 0 0 0; text-align:center;}
+	#page3 .bx-pager {text-align:right; padding:23px 20px 0 0;}
+.pager-link {
+	display:inline-block;
+	color:#c42e02;
+	margin-right:12px;
+	cursor:pointer;
+	text-decoration:none;
+}
+.pager-link:hover, 
+.pager-active{color:#7f7f7f;}
+.pager-active {cursor:default;}
+
+
+
+
+/***** contact form *****/
+#contact-form {
+	display:block;
+	width:100%;
+}
+	#contact-form label {
+		display:block; 
+		height:30px; 
+		overflow:hidden;
+	}
+	#contact-form input {
+		float:left; 
+		width:461px; 
+		font-size:12px; 
+		line-height:1.25em;
+		color:#808080;
+		padding:20px 20px; 
+		margin:0; 
+		font-family:Arial, Helvetica, sans-serif; 
+		border:1px solid #ededed;
+		background:#fff;
+		outline:none;
+	}
+	#contact-form textarea {
+		float:left;
+		height:304px; 
+		width:823px;
+		max-height:245px; 
+		max-width:658px;
+		font-size:20px; 
+		line-height:1.25em;
+		color:#808080;
+		padding:5px 10px; 
+		margin:0; 
+		font-family:Arial, Helvetica, sans-serif; 
+		border:1px solid #ededed;
+		background:#fff;
+		overflow:auto;
+		outline:none;
+	}
+.text-form {
+	float:left; 
+	display:block; 
+	line-height:24px;
+	width:136px; 
+    font-size: 30px;
+}
+
+.buttons {padding:10px 0 0 0; text-align:right;}
+.buttons a {margin-left:42px; padding:12px 35px; margin-top: 25px;}
+		
+/****************************footer************************/

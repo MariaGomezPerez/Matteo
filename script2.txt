@@ -1,0 +1,159 @@
+﻿DROP DATABASE IF EXISTS Clam2BD;
+Create database Clam2BD;
+use Clam2BD;
+
+CREATE TABLE IF NOT EXISTS `proveedores` (
+  `Id` int(11) NOT NULL,
+  `Rfc` varchar(13) DEFAULT NULL,
+  `Nombre` varchar(200) DEFAULT NULL,
+  `Direccion` varchar(200) DEFAULT NULL,
+  `Telefono` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `proveedores` (`Id`, `Rfc`, `Nombre`, `Direccion`, `Telefono`) VALUES
+(1, 'JEBR600102AAA', 'Jennyfer', 'Av. Sonora Plan de Ayala', '9615512999'),
+(2, 'CSF812728ESO', 'Karen', 'San Agustin No.100 Piso 7 Santa Fe ', '5221161923');
+
+
+CREATE TABLE IF NOT EXISTS `clientes` (
+  `Id` int(11) NOT NULL,
+  `Rfc` varchar(13) DEFAULT NULL,
+  `Nombre` varchar(200) DEFAULT NULL,
+  `Direccion` varchar(200) DEFAULT NULL,
+  `Telefono` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `clientes` (`Id`, `Rfc`, `Nombre`, `Direccion`, `Telefono`) VALUES
+(1, 'SALJ890309XXX', 'Mariano Luis Sanchez Lopez', 'Bienestar Social', '9691909221'),
+(2, 'DICK951206YYY', 'Sandra de Rosario Diaz Cano', 'La paz', '9612345100');
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fullname` varchar(500) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `pasadmin` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+
+#`token` varchar(40) NOT NULL,
+  `token_password` varchar(100) DEFAULT NULL,
+  `password_request` int(11) DEFAULT '0',
+
+INSERT INTO `user` (`id`, `fullname`, `username`, `email`, `password`, `pasadmin`) VALUES
+(1, '', 'Administrador', 'admin@gmail.com', '', '123456'),
+(2, 'MariaGP', 'Maria', 'nena@gmail.com', '1234', ''),
+(3, 'PaoloBorras', 'paul', 'paul@gmail.com', '1234', ''),
+(4, 'Luis Alberto', 'Luis', 'luis@gmail.com', '123', ''),
+(5, 'Marta hernandez', 'Marta', 'marta@gmail.com', '123', '2017-10-16 00:17:57'),
+(6, 'Carla Monserrad', 'Carla', 'CM@gmail.com', '123', '2017-10-16 00:20:22'),
+(7, '', 'AdmiMaria', 'Maria@gmail.com', '', '1234556'),
+(8, '', 'AdmiLuis', 'Luis2@gmail.com', '', '123666'),
+(9, 'Ana Cristina', 'Ana', 'Amdana@gmail.com', '1234556', '2017-10-27 14:03:53'),
+(11, 'dghrtth', 'ddddd', 'qq@gmail.com', '12', '2017-10-27 18:52:18');
+
+CREATE TABLE IF NOT EXISTS `tiposproductos` (
+  `Id` int(11) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Precio` varchar(30) DEFAULT NULL,
+  `Cantidad` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `tiposproductos` (`Id`, `Nombre`, `Precio`, `Cantidad`) VALUES
+(1, 'pastel de crema', '240', '2'),
+(2, 'Pastel de Zanahoria', '200.00', '100'),
+(3, 'Gelatina de mosaico', '120', '50'),
+(4, 'Bombones de chocolate', '50', '20'),
+(5, 'pastel de rompópe', '150', '1');
+
+
+CREATE TABLE IF NOT EXISTS `compras` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `numeroventa` int(11) NOT NULL,
+  `nombre` text COLLATE utf8mb4_spanish_ci NOT NULL,
+  `imagen` text COLLATE utf8mb4_spanish_ci NOT NULL,
+  `precio` text COLLATE utf8mb4_spanish_ci NOT NULL,
+  `cantidad` text COLLATE utf8mb4_spanish_ci NOT NULL,
+  `subtotal` text COLLATE utf8mb4_spanish_ci NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci AUTO_INCREMENT=5 ;
+
+INSERT INTO `compras` (`Id`, `numeroventa`, `nombre`, `imagen`, `precio`, `cantidad`, `subtotal`) VALUES
+(5, 1, 'Pastel de fresas', 'productos/img12.jpeg', '150', '3', '450'),
+(6, 2, 'Pay de Moras', 'productos/imagen.jpeg', '50.5', '2', '101'),
+(7, 3, 'Pastel de fresas', 'productos/img12.jpeg', '150', '9', '1350'),
+(8, 4, '', '', '0', '10', '0'),
+(9, 4, 'Pastel de Manzana', 'productos/imagen1.jpeg', '150.5', '1', '150.5'),
+(10, 5, 'Pastel de Manzana', 'productos/imagen1.jpeg', '150.5', '1', '150.5'),
+(11, 5, 'Pay de Moras', './productos/imagen.jpg', '50.5', '1', '50.5'),
+(12, 6, 'Pay de Moras', './productos/imagen.jpg', '50.5', '3', '151.5'),
+(13, 7, 'Pay de Moras', './productos/imagen.jpg', '50.5', '1', '50.5'),
+(14, 8, 'Pay de Moras', './productos/imagen.jpg', '50.5', '11', '555.5'),
+(15, 9, 'Pay de piña', 'productos/imagen11.jpg', '9.5', '1', '9.5'),
+(16, 10, 'Pay de Moras', './productos/imagen.jpg', '50.5', '1', '50.5'),
+(17, 11, 'Pay de Moras', './productos/imagen.jpg', '50.5', '1', '50.5'),
+(18, 12, 'Pay de Moras', './productos/imagen.jpg', '50.5', '1', '50.5'),
+(19, 13, 'Pay de Moras', './productos/imagen.jpg', '50.5', '1', '50.5'),
+(20, 14, 'Pay de limon\r\n', 'productos/imagen12.jpg', '105.95', '1', '105.95'),
+(21, 15, '', '', '0', '8', '0'),
+(22, 15, 'Pastel de Zanahoria', 'productos/imagen1.jpeg', '150.5', '1', '150.5'),
+(23, 16, 'Pay de Moras', './productos/imagen.jpg', '50.5', '3', '151.5'),
+(24, 16, 'Pastel de Zanahoria', 'productos/imagen1.jpeg', '150.5', '1', '150.5'),
+(25, 17, 'Pay de Moras', './productos/imagen.jpg', '50.5', '8', '404'),
+(26, 18, 'Pay de Moras', './productos/imagen.jpg', '50.5', '3', '151.5'),
+(27, 18, 'Pastel de Zanahoria', 'productos/imagen1.jpeg', '150.5', '1', '150.5'),
+(28, 19, 'Pay de limon\r\n', 'productos/imagen12.jpg', '105.95', '1', '105.95'),
+(29, 20, 'Copa de Frutillas', 'productos/slider-img2.jpg', '50.95', '1', '50.95');
+
+
+CREATE TABLE IF NOT EXISTS `productos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` text COLLATE utf8mb4_spanish_ci NOT NULL,
+  `descripcion` text COLLATE utf8mb4_spanish_ci NOT NULL,
+  `imagen` text COLLATE utf8mb4_spanish_ci NOT NULL,
+  `precio` double NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci AUTO_INCREMENT=7 ;
+
+
+
+INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `imagen`, `precio`) VALUES
+(1, 'Pay de Moras', 'Masa suave y esponjosa de \r\nbizcochuelo mojado en salsa de mora, con centro cubierto con crema de leche.', './productos/imagen.jpg', 50.5),
+(2, 'Galletas de Chispas de chocolate', 'Masa de hojaldre crocante y fresca, cubierto de chocolate.', 'productos/imagen10.jpg', 12.95),
+(3, 'Pastel de Zanahoria', 'Masa suave de la casa que concentra \r\nel delicioso sabor de la zanahoria\r\nmezclada con pequeños y tiernos\r\ntrozos de zanahorias frescas.', 'productos/imagen1.jpeg', 150.5),
+(4, 'Pay de piña', 'Masa esponjosa con relleno de mermelada de pina con trositos.', 'productos/imagen11.jpg', 9.5),
+(5, 'Pay de limon\r\n', 'Masa esponjosa de limon y crujiente.', 'productos/imagen12.jpg', 105.95),
+(6, 'Copa de Frutillas', 'Ricas frutas resien cortadas y frescas.', 'productos/slider-img2.jpg', 50.95),
+(7, 'Pastel de fresa\r\n\r\n', 'Rico pastel de fresas\r\ncon trozitos.', 'productos/slider-img3.jpg', 150),
+(8, 'Pay de chocolate\r\n', 'Masa suave y esponjosa de bizcochuelo mojado en salsa de tres leches, cubierto con crema de leche, chocolate y punto de glasse de fresa.', 'productos/img11.jpg', 200.5),
+(9, 'LOVE de Fresas', 'Copa de yoguth de fresas con sus trozitos.', 'productos/img10.jpg', 100.95),
+(10, 'Empanadas de manjar\r\n', 'Masa esponjosa y relleno de manjar.', 'productos/imagen9.jpg', 150),
+(11, 'Bimbuñuelos\r\n', 'Masa crujiente y duro de romper con una sola mordida.', 'productos/imagen8.jpg', 20.5),
+(12, 'Galletas de chocolate', 'Masa crujiente con crispas de chocolate.', 'productos/imagen7.jpg', 50.5),
+(13, 'Bombones de chocolate', 'Masa esponjosa con relleno de chocolate.', 'productos/imagen6.jpg', 30.95),
+(14, 'Pastel de chocolate con coco y almendras', 'Masa crujiente con chocolate y rayado de coco con almendras.', 'productos/imagen5.jpg', 200.95),
+(15, 'Pastel de tres leches', 'Masa esponjosa con 3 capas de leche.', 'productos/imagen4.jpg', 350.95),
+(16, 'Pastel de flan con chocolate', 'Patel de dos capas mitad de flan y chocolate y esponjoso.', 'productos/imagen3.jpg', 260.95),
+(17, 'Cupcakes\r\n', 'Mini ponqués de masa suave y esponjosa de vainilla ó chocolate, cubiertos con un delicado remolino de crema de sabores adornado con chips.', 'productos/imagen25.jpg', 42.95),
+(18, 'Bolitas de chocolate blanco y negro', 'Masa esponsoja de chocolate y crujiente.', 'productos/imagen24.jpg', 50.95),
+(19, 'Panqueques de chocolate', 'Pan esponjosa y jugosa de chocolate.', 'productos/imagen23.jpg', 100.5),
+(20, 'Pay de Fresas', 'Masa de hojaldre crocante y fresca rellena de crema de leche, y decorada con azúcar pulverizada y un punto de glasse de fresa.', 'productos/img12.jpeg', 200);
+
+CREATE TABLE IF NOT EXISTS `tarjeta` (
+  `Id` int(11) NOT NULL,
+  `nombre` varchar(20) DEFAULT NULL,
+  `numtarjeta` varchar(20) DEFAULT NULL,
+  `mes` varchar(2) DEFAULT NULL,
+  `ano` varchar(2) DEFAULT NULL,
+  `codigoseguridad` varchar(3) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+

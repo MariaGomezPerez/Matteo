@@ -1,9 +1,20 @@
-<?php
-error_reporting(E_ALL ^ E_DEPRECATED);
-	$server="localhost";
-	$username="root";
-	$password="";
-	$db='CMatteoCoffe';
-	$con=mysql_connect($server,$username,$password)or die("no se ha podido establecer la conexion");
-	$sdb=mysql_select_db($db,$con)or die("la base de datos no existe");
+<?php 
+// Parametros a configurar para la conexion de la base de datos 
+$hostdb = "localhost";    // sera el valor de nuestra servidor
+$usuariodb = "root";    // sera el valor de nuestra BD 
+$clavedb = "";    // sera el valor de nuestra BD 
+$basededatos = "CMatteoCoffe";    // sera el valor de nuestra BD 
+
+// Fin de los parametros a configurar para la conexion de la base de datos 
+$cadenaConexion = mysqli_connect("$hostdb","$usuariodb","$clavedb","$basededatos");
+// Check connection
+if (mysqli_connect_errno())
+    {
+    echo "Falló la conexion a MySQL: " . mysqli_connect_error();
+    }
+
+if (!$cadenaConexion->set_charset("utf8mb4")) {
+    exit();
+} else {
+}
 ?>

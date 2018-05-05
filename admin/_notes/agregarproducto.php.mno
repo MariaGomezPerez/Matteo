@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_base" value="name:Categoria;datatype:int,name:Clave_Producto;datatype:int,name:Imagen;datatype:blob,name:Nombre;datatype:blob,name:Descripcion;datatype:blob,name:Precio;datatype:real" />
+</info>

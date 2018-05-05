@@ -69,7 +69,7 @@ Formulario de contacto:</h6>
        
         
                                         
-         <a class="button-2" href="contacto.php" onclick="alert('Mensaje Enviado')" >Send</a>
+         <a class="button-2" href="contacto.php" onclick="alert('Mensaje Enviado')" >Enviar</a>
     
            
                                     </div> 
