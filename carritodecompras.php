@@ -1,4 +1,11 @@
 <?php
+session_start();
+if($_SESSION["Usuario"] == ""){
+    header("Location:login.php");
+    exit();
+}
+?>
+<?php
 	session_start();
 	include './conexion.php';
 	if(isset($_SESSION['carrito'])){

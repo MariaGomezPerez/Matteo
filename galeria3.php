@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION["Usuario"] == ""){
+    header("Location:login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
